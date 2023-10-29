@@ -5,11 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-
     private Rigidbody2D myRigidbody2D;
     private Animator m_Animator;
-
     private bool B_FacingRight = false;
+    public bool Once_Attack = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Once_Attack = false;
+            Debug.Log("Lclick");
+            m_Animator.SetTrigger("Attack");
 
+            myRigidbody2D.velocity = new Vector3(0, 0, 0);
+        }
+        
         // Set the MoveSpeed parameter in the Animator based on the magnitude of velocity.
         float velocityMagnitude = myRigidbody2D.velocity.magnitude;
         m_Animator.SetFloat("MoveSpeed", velocityMagnitude);
