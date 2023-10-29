@@ -94,7 +94,7 @@ public class CharacterController_2D : MonoBehaviour {
        
 
 
-        m_Animator.SetFloat("MoveSpeed", Mathf.Abs(h )+Mathf.Abs (v));
+        m_Animator.SetFloat("MoveSpeed", Mathf.Abs(h ) + Mathf.Abs (v));
 
  
     }
