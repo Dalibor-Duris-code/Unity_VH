@@ -1789,20 +1789,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2070063129}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &510865739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510865737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e17a5fb45dba641886f8a3a29ca7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  Once_Attack: 0
 --- !u!61 &510865740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8820,10 +8806,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 510865740}
-    - targetCorrespondingSourceObject: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 510865739}
   m_SourcePrefab: {fileID: 100100000, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
 --- !u!1001 &2089331478
 PrefabInstance:
