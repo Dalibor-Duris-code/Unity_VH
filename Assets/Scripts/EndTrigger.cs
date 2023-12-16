@@ -5,22 +5,14 @@ using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public GameObject endScreen;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            endScreen.SetActive(true);
+            Time.timeScale = 0;
             Debug.Log("Enter collider");
         }
     }
