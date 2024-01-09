@@ -7,8 +7,6 @@ public class PauseMenu : MonoBehaviour
 {
     private static bool GameIsPaused;
     public GameObject pauseMenuUI;
-    public GameObject player1;
-    public GameObject player2;
 
     private void Start()
     {
@@ -44,13 +42,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-/*
+
     public void LoadMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
-
+/*
     public void LoadGame()
     {
         SaveLoadPosition.LoadPosition(player1,player2,"save");
