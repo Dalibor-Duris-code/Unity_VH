@@ -13,6 +13,7 @@ public class CoinCollect : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("CoinArea");
         if (other.gameObject.CompareTag("Coin"))
         {
             _count++;

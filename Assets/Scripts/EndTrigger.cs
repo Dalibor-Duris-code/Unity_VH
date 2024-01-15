@@ -11,16 +11,11 @@ public class EndTrigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        int counter = int.Parse(counterText.text);
-
-        if (counter == 3)
+        if (other.CompareTag("Player"))
         {
-            if (other.CompareTag("Player"))
-            {
-                endScreen.SetActive(true);
-                Time.timeScale = 0;
-                //Debug.Log("Enter collider");
-            }
+            endScreen.SetActive(true);
+            Time.timeScale = 0;
+            //Debug.Log("Enter collider");
         }
     }
 
