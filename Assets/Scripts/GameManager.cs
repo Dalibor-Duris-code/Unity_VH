@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,11 @@ public class GameManager : MonoBehaviour
 {
     // Singleton instance
     public static GameManager Instance { get; private set; }
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     private void Awake()
     {
