@@ -29,10 +29,12 @@ public class TrapShooter : MonoBehaviour
 
     void ShootProjectile()
     {
+        
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.velocity = shootingDirection.normalized * shootingSpeed;
         
         Destroy(projectile, projectileLifetime);
+        
     }
 }
