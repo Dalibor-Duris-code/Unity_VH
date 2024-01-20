@@ -7,7 +7,8 @@ public class DoorScript : MonoBehaviour
 {
     public GameObject openedDoor;
     public GameObject closedDoor;
-
+    public AudioSource sound;
+    
     private bool isOpened = false;
     private bool isPlayerNear = false;
 
@@ -39,6 +40,7 @@ public class DoorScript : MonoBehaviour
             {
                 openedDoor.SetActive(true);
                 closedDoor.SetActive(false);
+                sound.Play();
             }
             /*else
             {

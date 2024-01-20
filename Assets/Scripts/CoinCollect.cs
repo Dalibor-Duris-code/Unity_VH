@@ -10,6 +10,7 @@ public class CoinCollect : MonoBehaviour
 {
     private int _count;
     public Text counterText;
+    public AudioSource sound;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +19,7 @@ public class CoinCollect : MonoBehaviour
         {
             _count++;
             counterText.text = _count.ToString();
+            sound.Play();
             
             Destroy(other.gameObject);
             Debug.Log(_count);

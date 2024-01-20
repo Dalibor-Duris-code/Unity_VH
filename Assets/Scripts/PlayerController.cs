@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Animator m_Animator;
     private bool B_FacingRight = false;
     public bool Once_Attack = false;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,24 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(horizontalInput, verticalInput).normalized * moveSpeed;
         myRigidbody2D.velocity = movement;
+
+        
+        if (movement.magnitude > 0.1f) 
+        {
+            if (!sound.isPlaying) 
+            {
+                sound.Play();
+            }
+        }
+        else
+        {
+            if (sound.isPlaying) 
+            {
+                sound.Stop();
+            }
+        }
     }
+
 
     // Character Flip
     void Flip()
