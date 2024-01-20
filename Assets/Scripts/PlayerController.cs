@@ -22,14 +22,14 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        /*if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Once_Attack = false;
             Debug.Log("Lclick");
             m_Animator.SetTrigger("Attack");
 
             myRigidbody2D.velocity = new Vector3(0, 0, 0);
-        }
+        }*/
         
         // Set the MoveSpeed parameter in the Animator based on the magnitude of velocity.
         float velocityMagnitude = myRigidbody2D.velocity.magnitude;
